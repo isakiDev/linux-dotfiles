@@ -7,22 +7,20 @@
     "margin-top": 10,
     "margin-bottom": 0,
     "modules-left": [],
-    "modules-center": [
-      "hyprland/window",
-    ],
+    "modules-center": ["hyprland/window"],
     "modules-right": [
       "custom/hyprshot",
       "custom/sunset",
       "bluetooth",
       "pulseaudio",
       "clock",
-      "custom/notification"
+      "custom/notification",
     ],
     "hyprland/window": {
       "format": "<span  weight='bold' >{class}</span>",
       "max-length": 120,
       "icon": true,
-      "icon-size": 13
+      "icon-size": 13,
     },
     "clock": {
       "format": "{:%I:%M %p}",
@@ -37,9 +35,9 @@
         "format": {
           "months": "<span color='#ffead3'><b>{}</b></span>",
           "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
-          "today": "<span color='#ff6699'><b>{}</b></span>"
-        }
-      }
+          "today": "<span color='#ff6699'><b>{}</b></span>",
+        },
+      },
     },
     "custom/notification": {
       "tooltip": false,
@@ -52,14 +50,14 @@
         "inhibited-notification": "󰅸",
         "inhibited-none": "󰂜",
         "dnd-inhibited-notification": "󰅸",
-        "dnd-inhibited-none": "󱏨"
+        "dnd-inhibited-none": "󱏨",
       },
       "return-type": "json",
       "exec-if": "which swaync-client",
       "exec": "swaync-client -swb",
       "on-click-right": "swaync-client -d -sw",
       "on-click": "swaync-client -t -sw",
-      "escape": true
+      "escape": true,
     },
     "pulseaudio": {
       "format": "{icon}",
@@ -74,21 +72,17 @@
         "phone": "",
         "portable": "",
         "car": "",
-        "default": [
-          "",
-          "",
-          ""
-        ]
+        "default": ["", "", ""],
       },
-      "on-click": "pavucontrol"
+      "on-click": "pavucontrol",
     },
     "custom/sunset": {
       "format": "",
-      "on-click": "pgrep -x hyprsunset >/dev/null && pkill -x hyprsunset || hyprsunset -t 4000 &"
+      "on-click": "pgrep -x hyprsunset >/dev/null && pkill -x hyprsunset || hyprsunset -t 4000 &",
     },
     "custom/hyprshot": {
       "format": "󰲎",
-      "on-click": "hyprshot -m region -o $HOME/Images/Captures"
+      "on-click": "hyprshot -m region -o $HOME/Images/Captures",
     },
     "bluetooth": {
       // "format": " {status}",
@@ -98,7 +92,7 @@
       "tooltip-format": "{controller_alias}\t{controller_address}",
       "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
       "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-      "on-click": "blueman-manager"
-    }
-  }
+      "on-click": "blueman-manager",
+    },
+  },
 ]

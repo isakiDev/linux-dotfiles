@@ -11,11 +11,12 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # Oh My PosH (PowerShell-style prompt)
-# eval "$(oh-my-posh init zsh --config ~/.poshthemes/catppuccin.omp.json)"
 export PATH=$PATH:$HOME/.local/bin
-eval "$(oh-my-posh init zsh --config ~/.poshthemes/catppuccin_mocha.omp.json)"
+eval "$(oh-my-posh init zsh --config ~/.poshthemes/star.omp.json)"
 
-# nvm (Node Version Manager)
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+# fnm
+FNM_PATH="/home/isakidev/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "$(fnm env --shell zsh)"
+fi
