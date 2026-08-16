@@ -14,9 +14,9 @@
 ################
 
 # See https://wiki.hyprland.org/Configuring/Monitors/
-monitor=,1920x1080@165,0x0,1
-# monitor=,addreserved,4,0,0,0
-monitor=virtual1,1366x768@60.06,-1366x0,1
+
+monitor=DP-2,2560x1440@280,0x0,1
+monitor=DP-3,1920x1080@165,2560x0,1
 
 ###################
 ### MY PROGRAMS ###
@@ -45,9 +45,6 @@ exec-once = hyprpanel
 exec-once = hypridle
 exec-once = swaync
 exec-once = waybar
-
-exec-once = ~/.config/hypr/xdg-portal-fix.sh
-exec-once = systemctl --user enable --now hyprpolkitagent.service
 
 #############################
 ### ENVIRONMENT VARIABLES ###
@@ -169,10 +166,11 @@ animations {
 # windowrule = rounding 0, floating:0, onworkspace:f[1]
 
 # See https://wiki.hyprland.org/Configuring/Dwindle-Layout/ for more
-dwindle {
-    pseudotile = true # Master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
-    preserve_split = true # You probably want this
-}
+
+#dwindle {
+#    pseudotile = true # Master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
+#    preserve_split = true # You probably want this
+#}
 
 # See https://wiki.hyprland.org/Configuring/Master-Layout/ for more
 master {

@@ -1,11 +1,14 @@
 [
   {
+    "output": ["DP-3"],
+
     "layer": "top",
     "position": "top",
     "margin-left": 10,
     "margin-right": 10,
     "margin-top": 10,
     "margin-bottom": 0,
+    
     "modules-left": [],
     "modules-center": ["hyprland/window"],
     "modules-right": [

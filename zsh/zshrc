@@ -20,3 +20,19 @@ if [ -d "$FNM_PATH" ]; then
   export PATH="$FNM_PATH:$PATH"
   eval "$(fnm env --shell zsh)"
 fi
+
+
+# Load hooks and add gap between prompts
+autoload -Uz add-zsh-hook
+
+__first_prompt=true
+
+prompt_spacing() {
+  if [[ "$__first_prompt" == true ]]; then
+    __first_prompt=false
+  else
+    print
+  fi
+}
+
+add-zsh-hook precmd prompt_spacing
