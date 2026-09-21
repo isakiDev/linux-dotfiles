@@ -11,17 +11,13 @@ hl.config({
 -- Monitors
 hl.monitor({
     output = "DP-2",
-    disabled = false,
-    mode = "2560x1440@280.00Hz",
-    position = "0x0",
-    scale = 1,
-    cm = "srgb",
+    disabled = true,
 })
 hl.monitor({
-    output = "DP-3",
+    output = "HDMI-A-1",
     disabled = false,
     mode = "1920x1080@165.00Hz",
-    position = "2560x180",
+    position = "0x0",
     scale = 1,
     cm = "srgb",
 })
