@@ -287,7 +287,7 @@ hl.animation({
 
 hl.config({
     master = {
-        new_status = "master",
+        new_status = "master"
     },
 })
 
@@ -382,6 +382,11 @@ hl.bind(
 hl.bind(
     mainMod .. " + J",
     hl.dsp.layout("togglesplit")
+)
+
+hl.bind(
+    mainMod .. " + H",
+    hl.dsp.layout("swapsplit")
 )
 
 hl.bind(
