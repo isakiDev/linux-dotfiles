@@ -36,3 +36,14 @@ prompt_spacing() {
 }
 
 add-zsh-hook precmd prompt_spacing
+. "/home/isakidev/.deno/env"
+
+# bun completions
+[ -s "/home/isakidev/.bun/_bun" ] && source "/home/isakidev/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# opencode
+export PATH=/home/isakidev/.opencode/bin:$PATH

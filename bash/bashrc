@@ -12,3 +12,4 @@ PS1='[\u@\h \W]\$ '
 # oh-my-posh
 export PATH=$PATH:/home/isakidev/.local/bin
 eval "$(oh-my-posh init bash --config ~/.poshthemes/catppuccin.omp.json)"
+. "/home/isakidev/.deno/env"
